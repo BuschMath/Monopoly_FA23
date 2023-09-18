@@ -146,6 +146,7 @@
   <ItemGroup>
     <None Include="data.json" />
     <None Include="packages.config" />
+    <None Include="special.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

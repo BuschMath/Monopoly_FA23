@@ -35,6 +35,11 @@ void Monopoly::loadJSON()
         deeds.push_back(deed);
     }
 
+    infile.close();
+
+    infile.open(JSON_SPECIAL_SPACES);
+    infile >> j;
+
     for (auto& element : j["monopolySpecialSpaces"]) {
         SpecialSpace* specialSpace = new SpecialSpace(
 			element["name"],

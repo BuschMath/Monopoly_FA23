@@ -60,5 +60,8 @@
   <ItemGroup>
     <None Include="data.json" />
     <None Include="packages.config" />
+    <None Include="special.json">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

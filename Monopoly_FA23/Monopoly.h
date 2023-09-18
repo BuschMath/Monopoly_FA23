@@ -12,6 +12,7 @@
 #include "Property.h"
 
 const std::string JSON_FILE = "data.json";
+const std::string JSON_SPECIAL_SPACES = "special.json";
 const int totalSpaces = 40;
 
 class Monopoly
