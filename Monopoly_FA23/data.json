@@ -493,5 +493,6 @@
       "type": "Tax",
       "action": "pay_100",
       "spaceID": 38
+    }
   ]
 }

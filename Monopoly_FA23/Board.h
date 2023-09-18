@@ -10,8 +10,10 @@ public:
 	Board();
 	~Board();
 
+	void addSpace(Space* space);
+
 private:
-	std::vector<Space> spaces;
+	std::vector<Space*> spaces;
 };
 
 #endif // !BOARD_H

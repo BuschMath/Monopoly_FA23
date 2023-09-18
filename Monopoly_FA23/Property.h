@@ -9,6 +9,8 @@ public:
 	Property();
 	~Property();
 
+	void setDeedID(int deedID);
+
 private:
 	int deedID;
 };
