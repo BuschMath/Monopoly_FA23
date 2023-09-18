@@ -17,3 +17,13 @@ std::string Space::getName() const
 {
 	return name;
 }
+
+void Space::setSpaceID(int spaceID_)
+{
+	spaceID = spaceID_;
+}
+
+int Space::getSpaceID() const
+{
+	return spaceID;
+}

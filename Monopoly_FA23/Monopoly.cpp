@@ -56,7 +56,7 @@ void Monopoly::buildBoard()
     int deedCount = 0;
     int specialSpaceCount = 0;
 
-    for (int i = 0; i < totalSpaces; i++)
+    for (int i = 0; i < totalSpaces - 1; i++)
     {
         if (deeds[deedCount]->getDeedID() <
             specialSpaces[specialSpaceCount]->getSpaceID())
@@ -73,4 +73,9 @@ void Monopoly::buildBoard()
             specialSpaceCount++;
         }
     }
+
+    Property* prop = new Property();
+    prop->setDeedID(deeds[deedCount]->getDeedID());
+    prop->setName(deeds[deedCount]->getName());
+    board.addSpace(prop);
 }

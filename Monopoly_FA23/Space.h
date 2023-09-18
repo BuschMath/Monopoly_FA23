@@ -12,6 +12,9 @@ public:
 	void setName(std::string name_);
 	std::string getName() const;
 
+	void setSpaceID(int spaceID_);
+	int getSpaceID() const;
+
 private:
 	std::string name;
 	int spaceID;

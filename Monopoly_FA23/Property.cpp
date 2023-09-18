@@ -3,6 +3,7 @@
 Property::Property()
 {
 	deedID = -1;
+	setSpaceID(deedID);
 }
 
 Property::~Property()
@@ -12,4 +13,5 @@ Property::~Property()
 void Property::setDeedID(int deedID)
 {
 	this->deedID = deedID;
+	setSpaceID(deedID);
 }
