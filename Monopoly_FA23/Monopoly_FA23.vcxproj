@@ -129,6 +129,8 @@
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="Deed.h" />
+    <ClInclude Include="Dice.h" />
+    <ClInclude Include="Die.h" />
     <ClInclude Include="Monopoly.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Property.h" />
@@ -138,6 +140,8 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Deed.cpp" />
+    <ClCompile Include="Dice.cpp" />
+    <ClCompile Include="Die.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monopoly.cpp" />
     <ClCompile Include="Player.cpp" />

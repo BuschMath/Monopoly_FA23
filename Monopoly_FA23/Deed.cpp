@@ -34,6 +34,7 @@ Deed::Deed(std::string name, int price, int rent, int houseCost,
 	this->hotel = hotel;
 	this->groupID = groupID;
 	this->deedID = deedID;
+	ownerID = 0;
 }
 
 Deed::~Deed()
@@ -105,6 +106,11 @@ int Deed::getDeedID()
 	return deedID;
 }
 
+int Deed::getOwnerID()
+{
+	return ownerID;
+}
+
 void Deed::setName(std::string name)
 {
 	this->name = name;
@@ -168,4 +174,9 @@ void Deed::setGroupID(int groupID)
 void Deed::setDeedID(int deedID)
 {
 	this->deedID = deedID;
+}
+
+void Deed::setOwnerID(int ownerID)
+{
+	this->ownerID = ownerID;
 }

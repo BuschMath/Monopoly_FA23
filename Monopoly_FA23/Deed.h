@@ -25,6 +25,7 @@ public:
 	int getHotel();
 	int getGroupID();
 	int getDeedID();
+	int getOwnerID();
 
 	void setName(std::string name);
 	void setPrice(int price);
@@ -39,6 +40,7 @@ public:
 	void setHotel(int hotel);
 	void setGroupID(int groupID);
 	void setDeedID(int deedID);
+	void setOwnerID(int ownerID);
 
 private:
 	std::string name;
@@ -54,6 +56,8 @@ private:
 	int hotel;
 	int groupID;
 	int deedID;
+	// owner id code: 0 = unowned, 1 = player 1, 2 = player 2, 3 = player 3, 4 = player 4
+	int ownerID;
 };
 
 #endif // !DEED_H

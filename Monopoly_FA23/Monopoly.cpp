@@ -1,13 +1,47 @@
 #include "Monopoly.h"
 
-Monopoly::Monopoly()
+Monopoly::Monopoly(int noOfPlayers)
 {
 	loadJSON();
     buildBoard();
+    buildPlayers(noOfPlayers);
+    buildDice();
 }
 
 Monopoly::~Monopoly()
 {
+}
+
+void Monopoly::play()
+{
+int currentPlayer = 0;
+	bool gameOver = false;
+
+	while (!gameOver)
+	{
+		std::cout << players[currentPlayer]->getName() << "'s turn" << std::endl;
+		std::cout << "Press enter to roll the dice" << std::endl;
+		std::cin.ignore();
+        dice.rollDice();
+        std::vector<int> diceValues = dice.getDiceValues();
+        int roll = 0;
+		
+        for (int i = 0; i < noOfDice; i++)
+        {
+            roll += diceValues[i];
+        }
+
+		std::cout << "You rolled a " << roll << std::endl;
+		players[currentPlayer]->move(roll);
+		std::cout << players[currentPlayer]->getName() << " is now on " << board.getSpace(players[currentPlayer]->getPosition())->getName() << std::endl;
+		board.getSpace(players[currentPlayer]->getPosition())->action(players[currentPlayer]);
+		std::cout << players[currentPlayer]->getName() << " has $" << players[currentPlayer]->getBalance() << std::endl;
+		currentPlayer++;
+		if (currentPlayer == noOfPlayers)
+		{
+			currentPlayer = 0;
+		}
+	}
 }
 
 void Monopoly::loadJSON()
@@ -78,4 +112,27 @@ void Monopoly::buildBoard()
     prop->setDeedID(deeds[deedCount]->getDeedID());
     prop->setName(deeds[deedCount]->getName());
     board.addSpace(prop);
+}
+
+void Monopoly::buildPlayers(int noOfPlayers)
+{
+    this->noOfPlayers = noOfPlayers;
+
+    for (int i = 0; i < noOfPlayers; i++)
+    {
+        std::cout << "Enter player " << i + 1 << "'s name: ";
+        std::string name;
+        std::cin >> name;
+        Player* player = new Player(name, i + 1);
+        players.push_back(player);
+    }
+}
+
+void Monopoly::buildDice()
+{
+    for (int i = 0; i < noOfDice; i++)
+    {
+        Die* temp = new Die(noOfSidesOnDice);
+        dice.addDie(*temp);
+    }
 }
