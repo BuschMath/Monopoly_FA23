@@ -130,6 +130,7 @@
     <ClInclude Include="Board.h" />
     <ClInclude Include="Deed.h" />
     <ClInclude Include="Monopoly.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Property.h" />
     <ClInclude Include="Space.h" />
     <ClInclude Include="SpecialSpace.h" />
@@ -139,6 +140,7 @@
     <ClCompile Include="Deed.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Monopoly.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Property.cpp" />
     <ClCompile Include="Space.cpp" />
     <ClCompile Include="SpecialSpace.cpp" />
