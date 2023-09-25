@@ -27,3 +27,7 @@ int Space::getSpaceID() const
 {
 	return spaceID;
 }
+
+void Space::action(Player* player)
+{
+}

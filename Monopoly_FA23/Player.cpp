@@ -30,3 +30,13 @@ std::string Player::getName()
 {
 	return name;
 }
+
+void Player::move(int spaces)
+{
+	location += spaces;
+}
+
+int Player::getLocation()
+{
+	return location;
+}

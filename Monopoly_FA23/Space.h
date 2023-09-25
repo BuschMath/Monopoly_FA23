@@ -2,6 +2,7 @@
 #define SPACE_H
 
 #include <string>
+#include "Player.h"
 
 class Space
 {
@@ -14,6 +15,8 @@ public:
 
 	void setSpaceID(int spaceID_);
 	int getSpaceID() const;
+
+	void action(Player* player);
 
 private:
 	std::string name;

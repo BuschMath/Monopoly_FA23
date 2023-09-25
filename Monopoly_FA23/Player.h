@@ -11,6 +11,8 @@ public:
 	~Player();
 
 	std::string getName();
+	void move(int spaces);
+	int getLocation();
 
 private:
 	std::string name;

@@ -11,6 +11,7 @@ public:
 	~Board();
 
 	void addSpace(Space* space);
+	Space* getSpace(int index);
 
 private:
 	std::vector<Space*> spaces;

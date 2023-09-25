@@ -33,8 +33,8 @@ int currentPlayer = 0;
 
 		std::cout << "You rolled a " << roll << std::endl;
 		players[currentPlayer]->move(roll);
-		std::cout << players[currentPlayer]->getName() << " is now on " << board.getSpace(players[currentPlayer]->getPosition())->getName() << std::endl;
-		board.getSpace(players[currentPlayer]->getPosition())->action(players[currentPlayer]);
+		std::cout << players[currentPlayer]->getName() << " is now on " << board.getSpace(players[currentPlayer]->getLocation())->getName() << std::endl;
+		board.getSpace(players[currentPlayer]->getLocation())->action(players[currentPlayer]);
 		std::cout << players[currentPlayer]->getName() << " has $" << players[currentPlayer]->getBalance() << std::endl;
 		currentPlayer++;
 		if (currentPlayer == noOfPlayers)
